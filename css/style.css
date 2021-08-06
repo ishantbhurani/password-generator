@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --color-bg: #1a202c;
+  --color-card-bg: #1a202c;
+  --color-accent: #efc9a4;
+  --color-gray: #d0d0d0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0.06rem;
+  background-color: var(--color-bg);
+}
+
+.card-password {
+  margin: 5em auto 0;
+  width: 80%;
+  padding: 3.5rem 5rem;
+  border-radius: 0.35rem;
+  border-bottom: 0.5rem solid #57a855;
+  position: relative;
+  box-shadow: 0 4px 15px -8px var(--color-accent); /* TODO */
+}
+
+.message {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #57a855;
+  padding: 1rem;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  color: var(--color-accent);
+}
+
+.message-show {
+  opacity: 1;
+}
+
+.card-password-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 0.7rem;
+  letter-spacing: 0.15rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.card-password-text {
+  flex: 1 1 80%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  overflow: hidden;
+}
+
+.card-password-actions > * {
+  cursor: pointer;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-gray);
+  transition: all 250ms ease-in-out;
+}
+
+.card-password-actions > *:hover {
+  color: var(--color-accent);
+}
+
+.card-password-strength {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.8rem;
+}
+
+.card-password-strength > * {
+  font-size: 1.5rem;
+  padding-right: 0.3rem;
+}
+
+.password-weak {
+  color: #f37b51;
+  display: none;
+}
+
+.password-strong {
+  color: #57a855;
+  display: none;
+}
+
+.show-password-strength {
+  display: block;
+}
+
+.card-password-strength-text {
+  font-size: 0.875rem;
+  color: #57a855;
+}
+
+.preference-card {
+  width: 70%;
+  background: var(--color-card-bg);
+  color: var(--color-accent);
+  margin: 3rem auto 0;
+  padding: 2rem 3rem;
+  font-size: 0.8rem;
+  border-radius: 0.35rem;
+  box-shadow: 0 4px 15px -8px var(--color-accent);
+}
+
+.preference-card-para {
+  margin: 1em 0;
+  color: var(--color-accent);
+  opacity: 0.8;
+}
+
+.slide-container {
+  width: 95%;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: var(--color-gray);
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid var(--color-accent);
+  cursor: pointer;
+}
+
+.bubble {
+  background: var(--color-gray);
+  color: var(--color-card-bg);
+  padding: 4px 12px;
+  position: absolute;
+  border-radius: 4px;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+}
+
+.preference-card-choices > label {
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 1rem;
+  margin-right: 1rem;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  color: red;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="card-password">
+      <div class="message">Copied!</div>
+      <div class="card-password-main">
+        <div class="card-password-text">password</div>
+        <div class="card-password-actions">
+          <i id="copy" class="fas fa-copy"></i>
+          <i id="redo" class="fas fa-sync"></i>
+        </div>
+      </div>
+      <div class="card-password-strength">
+        <i
+          id="icon-password-weak"
+          class="fas fa-exclamation-circle password-weak"
+        ></i>
+        <i
+          id="icon-password-strong"
+          class="fas fa-check-circle password-strong"
+        ></i>
+        <p id="password-strength-text" class="card-password-strength-text"></p>
+      </div>
+    </div>
+    <div class="preference-card">
+      <p class="preference-card-para">Password Length (4-64)</p>
+      <div class="slide-container">
+        <input
+          class="slider"
+          type="range"
+          min="4"
+          max="64"
+          class="slider"
+          id="myRange"
+          value="20"
+        />
+        <output id="bubble" class="bubble"></output>
+      </div>
+      <div class="preference-card-choices">
+        <label>
+          <input id="cb-letters" type="checkbox" checked />
+          Letters
+        </label>
+        <label>
+          <input id="cb-mixed-case" type="checkbox" checked />
+          Mixed case
+        </label>
+        <label>
+          <input id="cb-punctuations" type="checkbox" checked />
+          Punctuation
+        </label>
+        <label>
+          <input id="cb-numbers" type="checkbox" checked />
+          Numbers
+        </label>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
