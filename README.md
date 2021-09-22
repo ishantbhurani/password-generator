@@ -1,14 +1,11 @@
-
 # Password Generator (Javascript)
 
 Generate random passwords of different lengths and combinations (letters, mixed-case, punctuations, numbers)
-
 
 ## Demo
 
 - [Live](https://ishantbhurani.github.io/password-generator/)
 - [Codepen](https://codepen.io/ivanshaunt/full/VwppmxB)
-
 
 ## Screenshots
 
@@ -19,8 +16,7 @@ Generate random passwords of different lengths and combinations (letters, mixed-
 ![password strength preview](https://user-images.githubusercontent.com/67356291/128504652-ccb62589-faa6-49cb-94bd-43f687cdf89d.png)
 
 ![copy password preview](https://user-images.githubusercontent.com/67356291/128504773-1cb20de0-7b84-4b56-80d9-31eb248e8bbc.png)
-  
-  
+
 ## Features
 
 - Random password generation
@@ -32,7 +28,6 @@ Generate random passwords of different lengths and combinations (letters, mixed-
 - Numbers selected by default if letters unselected
 - Mixed case disabled if letters unselected
 
-
 ## Tech Stack
 
 **Client:** HTML, CSS, Javascript
@@ -43,13 +38,14 @@ Generate random passwords of different lengths and combinations (letters, mixed-
 
 ## Color Reference
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Background Color | ![#1a202c](https://via.placeholder.com/10/1a202c?text=+) #1a202c |
+| Color                 | Hex                                                              |
+| --------------------- | ---------------------------------------------------------------- |
+| Background Color      | ![#1a202c](https://via.placeholder.com/10/1a202c?text=+) #1a202c |
 | Card Background Color | ![#1a202c](https://via.placeholder.com/10/1a202c?text=+) #1a202c |
-| Accent Color | ![#efc9a4](https://via.placeholder.com/10/efc9a4?text=+) #efc9a4 |
-| Gray Color | ![#d0d0d0](https://via.placeholder.com/10/d0d0d0?text=+) #d0d0d0 |
-
+| Accent Color          | ![#efc9a4](https://via.placeholder.com/10/efc9a4?text=+) #efc9a4 |
+| Gray Color            | ![#d0d0d0](https://via.placeholder.com/10/d0d0d0?text=+) #d0d0d0 |
+| Green Color           | ![#57a855](https://via.placeholder.com/10/57a855?text=+) #57a855 |
+| Red Color             | ![#f37b51](https://via.placeholder.com/10/f37b51?text=+) #f37b51 |
 
 ## Run Locally
 
@@ -66,10 +62,13 @@ Go to the project directory
 ```
 
 Run `index.html`
+
 ```bash
   <browsername> index.html
 ```
+
 E.g.
+
 ```bash
   firefox index.html
 ```
@@ -78,10 +77,11 @@ E.g.
   google-chrome index.html
 ```
 
-  ## Credits
- - [Font Awesome](https://fontawesome.com/)
+## Credits
+
+- [Font Awesome](https://fontawesome.com/)
 
 ## Acknowledgements
- - [Norton](https://my.norton.com/extspa/passwordmanager?path=pwd-gen)
- - [LastPass](https://www.lastpass.com/features/password-generator)
 
+- [Norton](https://my.norton.com/extspa/passwordmanager?path=pwd-gen)
+- [LastPass](https://www.lastpass.com/features/password-generator)
