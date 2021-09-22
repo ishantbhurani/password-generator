@@ -26,6 +26,7 @@ body {
 .card-password {
   margin: 5em auto 0;
   width: 80%;
+  max-width: 1000px;
   padding: 3.5rem 5rem;
   border-radius: 0.35rem;
   border-bottom: 0.5rem solid #57a855;
@@ -114,6 +115,7 @@ body {
 
 .preference-card {
   width: 70%;
+  max-width: 800px;
   background: var(--color-card-bg);
   color: var(--color-accent);
   margin: 3rem auto 0;
