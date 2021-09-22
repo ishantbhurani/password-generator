@@ -64,7 +64,9 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: var(--color-accent);
-  overflow: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .card-password-actions > * {
