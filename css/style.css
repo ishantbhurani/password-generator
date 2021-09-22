@@ -5,6 +5,8 @@
   --color-card-bg: #1a202c;
   --color-accent: #efc9a4;
   --color-gray: #d0d0d0;
+  --color-green: #57a855;
+  --color-red: #f37b51;
 }
 
 *,
@@ -29,7 +31,7 @@ body {
   max-width: 1000px;
   padding: 3.5rem 5rem;
   border-radius: 0.35rem;
-  border-bottom: 0.5rem solid #57a855;
+  border-bottom: 0.5rem solid var(--color-green);
   position: relative;
   box-shadow: 0 4px 15px -8px var(--color-accent); /* TODO */
 }
@@ -39,7 +41,7 @@ body {
   top: 3%;
   left: 50%;
   transform: translate(-50%);
-  background-color: #57a855;
+  background-color: var(--color-green);
   padding: 1rem;
   border-radius: 1rem;
   opacity: 0;
@@ -95,12 +97,12 @@ body {
 }
 
 .password-weak {
-  color: #f37b51;
+  color: var(--color-red);
   display: none;
 }
 
 .password-strong {
-  color: #57a855;
+  color: var(--color-green);
   display: none;
 }
 
@@ -110,7 +112,7 @@ body {
 
 .card-password-strength-text {
   font-size: 0.875rem;
-  color: #57a855;
+  color: var(--color-green);
 }
 
 .preference-card {
