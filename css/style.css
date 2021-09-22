@@ -194,3 +194,27 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
   color: red;
 }
+
+@media screen and (max-width: 768px) {
+  .card-password-text {
+    flex: 1 1 50%;
+  }
+
+  .card-password {
+    padding: 3.5rem 3rem;
+  }
+
+  .preference-card {
+    padding: 2rem;
+  }
+
+  .preference-card-choices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .preference-card-choices > label {
+    margin: 0;
+  }
+}
