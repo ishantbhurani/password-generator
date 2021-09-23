@@ -36,6 +36,18 @@ body {
   box-shadow: 0 4px 15px -8px var(--color-accent); /* TODO */
 }
 
+.card-password.weak {
+  border-bottom-color: var(--color-red);
+}
+
+.card-password.weak .password-weak {
+  display: block;
+}
+
+.card-password.weak .password-strong {
+  display: none;
+}
+
 .message {
   position: absolute;
   top: 3%;
@@ -103,16 +115,10 @@ body {
 
 .password-strong {
   color: var(--color-green);
-  display: none;
-}
-
-.show-password-strength {
-  display: block;
 }
 
 .card-password-strength-text {
   font-size: 0.875rem;
-  color: var(--color-green);
 }
 
 .preference-card {

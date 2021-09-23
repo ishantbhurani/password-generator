@@ -3,9 +3,6 @@ const message = document.querySelector(".message");
 const passwordText = document.querySelector(".card-password-text");
 const redo = document.getElementById("redo");
 const copy = document.getElementById("copy");
-const iconPasswordStrong = document.getElementById("icon-password-strong");
-const iconPasswordWeak = document.getElementById("icon-password-weak");
-const passwordStrengthText = document.getElementById("password-strength-text");
 const sliderLength = document.getElementById("myRange");
 const cbLetters = document.getElementById("cb-letters");
 const cbMixedCase = document.getElementById("cb-mixed-case");
@@ -14,8 +11,6 @@ const cbNumbers = document.getElementById("cb-numbers");
 const bubble = document.getElementById("bubble");
 
 const passwordStrength = Object.freeze({ weak: 0, strong: 1 });
-const colorGreen = "#57a855";
-const colorRed = "#f37b51";
 
 const alphas = "abcdefghijklmnopqrstuvwxyz";
 const digits = "0123456789";
@@ -40,6 +35,7 @@ const getSource = () => {
 
 const generatePassword = () => {
   const source = getSource();
+  console.log(source);
   const sourceLength = source.length;
 
   let password = "";
@@ -57,19 +53,7 @@ const generatePassword = () => {
 };
 
 const changePasswordStrength = (strength) => {
-  if (strength == passwordStrength.strong) {
-    iconPasswordStrong.classList.add("show-password-strength");
-    iconPasswordWeak.classList.remove("show-password-strength");
-    passwordStrengthText.innerHTML = "Strong password";
-    passwordStrengthText.style.color = colorGreen;
-    passwordCard.style.borderBottomColor = colorGreen;
-  } else {
-    iconPasswordWeak.classList.add("show-password-strength");
-    iconPasswordStrong.classList.remove("show-password-strength");
-    passwordStrengthText.innerHTML = "Weak password";
-    passwordStrengthText.style.color = colorRed;
-    passwordCard.style.borderBottomColor = colorRed;
-  }
+  passwordCard.classList.toggle("weak", strength !== passwordStrength.strong);
 };
 
 const showPassword = (password) => {
