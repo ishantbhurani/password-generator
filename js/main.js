@@ -4,10 +4,7 @@ const passwordText = document.querySelector(".card-password-text");
 const redo = document.getElementById("redo");
 const copy = document.getElementById("copy");
 const sliderLength = document.getElementById("myRange");
-const cbLetters = document.getElementById("cb-letters");
-const cbMixedCase = document.getElementById("cb-mixed-case");
-const cbPunctuations = document.getElementById("cb-punctuations");
-const cbNumbers = document.getElementById("cb-numbers");
+const form = document.getElementById("form");
 const bubble = document.getElementById("bubble");
 
 const passwordStrength = Object.freeze({ weak: 0, strong: 1 });
@@ -66,10 +63,10 @@ const showPassword = (password) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   setBubble();
-  letters = cbLetters.checked;
-  numbers = cbNumbers.checked;
-  mixedCase = cbMixedCase.checked;
-  punctuations = cbPunctuations.checked;
+  letters = form.letters.checked;
+  numbers = form.numbers.checked;
+  mixedCase = form.mixedCase.checked;
+  punctuations = form.punctuations.checked;
   showPassword(generatePassword());
 });
 
@@ -100,29 +97,29 @@ sliderLength.onclick = () => {
   showPassword(generatePassword());
 };
 
-cbLetters.onclick = function () {
+form.letters.onclick = function () {
   letters = this.checked;
   if (!letters) {
     mixedCase = false;
-    cbMixedCase.checked = false;
+    form.mixedCase.checked = false;
   }
-  cbMixedCase.disabled = !letters;
-  cbNumbers.disabled = !letters;
+  form.mixedCase.disabled = !letters;
+  form.numbers.disabled = !letters;
   showPassword(generatePassword());
 };
 
-cbNumbers.onclick = function () {
+form.numbers.onclick = function () {
   numbers = this.checked;
-  cbLetters.disabled = !numbers;
+  form.letters.disabled = !numbers;
   showPassword(generatePassword());
 };
 
-cbMixedCase.onclick = function () {
+form.mixedCase.onclick = function () {
   mixedCase = this.checked;
   showPassword(generatePassword());
 };
 
-cbPunctuations.onclick = function () {
+form.punctuations.onclick = function () {
   punctuations = this.checked;
   showPassword(generatePassword());
 };

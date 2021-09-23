@@ -61,24 +61,29 @@
         />
         <output id="bubble" class="bubble"></output>
       </div>
-      <div class="preference-card-choices">
+      <form id="form" class="preference-card-choices">
         <label>
-          <input id="cb-letters" type="checkbox" checked />
+          <input id="cb-letters" type="checkbox" name="letters" checked />
           Letters
         </label>
         <label>
-          <input id="cb-mixed-case" type="checkbox" checked />
+          <input id="cb-mixed-case" type="checkbox" name="mixedCase" checked />
           Mixed case
         </label>
         <label>
-          <input id="cb-punctuations" type="checkbox" checked />
+          <input
+            id="cb-punctuations"
+            type="checkbox"
+            name="punctuations"
+            checked
+          />
           Punctuation
         </label>
         <label>
-          <input id="cb-numbers" type="checkbox" checked />
+          <input id="cb-numbers" type="checkbox" name="numbers" checked />
           Numbers
         </label>
-      </div>
+      </form>
     </div>
     <script src="js/main.js"></script>
   </body>
