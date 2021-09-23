@@ -31,17 +31,12 @@ const getSource = () => {
 
 const generatePassword = () => {
   const source = getSource();
-  console.log(source);
   const sourceLength = source.length;
 
   let password = "";
 
   for (let i = 0; i < length; i++) {
     let temp = source.charAt(Math.floor(Math.random() * sourceLength));
-    // if (symbols.includes(temp)) {
-    //   temp = "\\" + temp;
-    // }
-
     password += temp;
   }
 
