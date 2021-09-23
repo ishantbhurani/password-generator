@@ -3,7 +3,6 @@ const message = document.querySelector(".message");
 const passwordText = document.querySelector(".card-password-text");
 const redo = document.getElementById("redo");
 const copy = document.getElementById("copy");
-const sliderLength = document.getElementById("myRange");
 const form = document.getElementById("form");
 const bubble = document.getElementById("bubble");
 
@@ -13,7 +12,7 @@ const alphas = "abcdefghijklmnopqrstuvwxyz";
 const digits = "0123456789";
 const symbols = "`-=[]\\;,./!@#$%^&*()_+{}|:<>?";
 
-let length = sliderLength.value; //(4-64)
+let length = form.slider.value; //(4-64)
 let letters = true;
 let mixedCase = true;
 let punctuations = true;
@@ -87,13 +86,13 @@ copy.addEventListener("click", () => {
   }, 1500);
 });
 
-sliderLength.oninput = function () {
+form.slider.oninput = function () {
   setBubble();
   length = this.value;
   showPassword(generatePassword());
 };
 
-sliderLength.onclick = () => {
+form.slider.onclick = () => {
   showPassword(generatePassword());
 };
 
@@ -125,9 +124,9 @@ form.punctuations.onclick = function () {
 };
 
 const setBubble = () => {
-  const val = sliderLength.value;
-  const min = sliderLength.min;
-  const max = sliderLength.max;
+  const val = form.slider.value;
+  const min = form.slider.min;
+  const max = form.slider.max;
   const newVal = Number(((val - min) * 100) / (max - min));
   bubble.innerHTML = val;
   bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;

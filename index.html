@@ -47,7 +47,7 @@
         </p>
       </div>
     </div>
-    <div class="preference-card">
+    <form id="form" class="preference-card">
       <p class="preference-card-para">Password Length (4-64)</p>
       <div class="slide-container">
         <input
@@ -57,11 +57,12 @@
           max="64"
           class="slider"
           id="myRange"
+          name="slider"
           value="20"
         />
         <output id="bubble" class="bubble"></output>
       </div>
-      <form id="form" class="preference-card-choices">
+      <div class="preference-card-choices">
         <label>
           <input id="cb-letters" type="checkbox" name="letters" checked />
           Letters
@@ -83,8 +84,8 @@
           <input id="cb-numbers" type="checkbox" name="numbers" checked />
           Numbers
         </label>
-      </form>
-    </div>
+      </div>
+    </form>
     <script src="js/main.js"></script>
   </body>
 </html>
