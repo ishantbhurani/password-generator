@@ -66,6 +66,10 @@ const showPassword = (password) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   setBubble();
+  letters = cbLetters.checked;
+  numbers = cbNumbers.checked;
+  mixedCase = cbMixedCase.checked;
+  punctuations = cbPunctuations.checked;
   showPassword(generatePassword());
 });
 
