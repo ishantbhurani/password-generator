@@ -101,6 +101,8 @@ form.letters.onclick = function () {
   if (!letters) {
     mixedCase = false;
     form.mixedCase.checked = false;
+    numbers = true; // check numbers if letters not checked
+    form.numbers.checked = true;
   }
   form.mixedCase.disabled = !letters;
   form.numbers.disabled = !letters;
@@ -109,6 +111,10 @@ form.letters.onclick = function () {
 
 form.numbers.onclick = function () {
   numbers = this.checked;
+  if (!numbers) {
+    letters = true;
+    form.letters.checked = true;
+  }
   form.letters.disabled = !numbers;
   showPassword(generatePassword());
 };
