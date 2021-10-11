@@ -2,6 +2,18 @@
 
 Generate random passwords of different lengths and combinations (letters, mixed-case, punctuations, numbers)
 
+## Table of contents
+
+- [Demo](#demo)
+- [Screenshots](#screenshots)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Font Reference](#font-reference)
+- [Color Reference](#color-reference)
+- [Run Locally](#run-locally)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+
 ## Demo
 
 - [Live](https://ishantbhurani.github.io/password-generator/)
